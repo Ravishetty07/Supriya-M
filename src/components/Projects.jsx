@@ -1,53 +1,49 @@
 import React from "react";
 import { motion } from "framer-motion";
+import onrouteCaseStudy from "../assets/Documents/final (case study) onroute.pdf";
+import graphicDesignPortfolio from "../assets/Documents/Graphic Design Portfolio.pdf";
 
 const projectData = [
   {
     title: "OnRoute Travel Booking Platform",
     category: "UI/UX • Case Study",
     description: "A travel booking platform concept designed to make trip planning simple, fast, and enjoyable. The experience brings destination discovery, flight booking, hotel reservations, and trip management into a streamlined user journey.",
-    github: "#",
-    demo: "#",
+    link: onrouteCaseStudy,
     tags: ["UI/UX Design", "User Research", "Wireframing", "Prototyping"],
   },
   {
     title: "OnRoute Travel Agency Brand Identity",
     category: "Branding • Visual Identity",
     description: "A travel-agency visual identity developed for OnRoute, combining a modern travel-focused logo with a consistent color system and branded communication across print and promotional materials.",
-    github: "#",
-    demo: "#",
+    link: graphicDesignPortfolio,
     tags: ["Branding", "Logo Design", "Visual Identity", "Color Theory"],
   },
   {
     title: "OnRoute Marketing & Promotional Designs",
     category: "Graphic Design • Marketing",
     description: "A collection of promotional travel creatives developed for OnRoute, including brochures, magazines, newspapers, banners, billboards, bus-stop advertising, signage, and other campaign applications.",
-    github: "#",
-    demo: "#",
+    link: graphicDesignPortfolio,
     tags: ["Graphic Design", "Marketing Creatives", "Print Design", "Advertising"],
   },
   {
     title: "OnRoute Corporate Brand Collateral",
     category: "Brand Collateral",
     description: "Corporate communication materials created for the OnRoute brand, including business cards, ID cards, envelopes, invoices, letterheads, and other branded stationery.",
-    github: "#",
-    demo: "#",
+    link: graphicDesignPortfolio,
     tags: ["Branding", "Print Design", "Corporate Design", "Visual Communication"],
   },
   {
     title: "OnRoute Travel Campaign",
     category: "Campaign Design • Outdoor",
     description: "Travel-focused promotional visuals adapted across outdoor and physical brand applications, including sign boards, roll-up banners, bus-stop advertising, city-light displays, vehicle branding, and environmental graphics.",
-    github: "#",
-    demo: "#",
+    link: graphicDesignPortfolio,
     tags: ["Campaign Design", "Outdoor Advertising", "Visual Design", "Brand Application"],
   },
   {
     title: "OnRoute Brand Mockups",
     category: "Mockups • Brand Applications",
     description: "Real-world brand applications visualized through mockups, including office wall branding, T-shirt design, travel bags, vehicle graphics, and promotional display materials.",
-    github: "#",
-    demo: "#",
+    link: graphicDesignPortfolio,
     tags: ["Mockups", "Branding", "Visual Design", "Art Direction"],
   },
 ];
@@ -136,9 +132,9 @@ const Projects = () => {
                     {/* Interactive External Links */}
                     <div className="flex items-center gap-4 border-t border-gray-200/50 pt-4">
                       <a
-                        href={project.github}
+                        href={project.link || "#"}
                         target="_blank"
-                        rel="noreferrer"
+                        rel="noopener noreferrer"
                         className="text-xs font-black text-gray-900 hover:text-[#ff2a2a] inline-flex items-center gap-1 transition-colors duration-300"
                       >
                         View Project

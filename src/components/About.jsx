@@ -1,5 +1,6 @@
 import React from 'react';
 import stackImage from '../assets/about/image.png';
+import resumePdf from '../assets/Documents/SUPRIYA M.pdf';
 
 const About = () => {
   return (
@@ -41,32 +42,62 @@ const About = () => {
           <p className="text-lg font-bold mb-6 leading-relaxed max-w-3xl text-red-50">
             Hi, I’m <span className="text-black text-xl font-black mx-1 tracking-wide uppercase">Supriya M</span>. I’m a creative UI/UX Designer and Graphic Designer with training in user experience design, user interface design, branding, and visual communication. I enjoy creating user-friendly digital interfaces, visual identities, social media creatives, marketing materials, and polished brand visuals.
           </p>
-          <p className="text-lg font-bold mb-12 leading-relaxed max-w-3xl text-red-50">
+          <p className="text-lg font-bold mb-10 leading-relaxed max-w-3xl text-red-50">
             My design approach combines user research, wireframing, visual design, typography, color theory, and prototyping to create clear and engaging experiences. I’m passionate about transforming ideas into thoughtful digital and visual solutions.
           </p>
 
+          <a 
+            href={resumePdf} 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="inline-block bg-black text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-gray-800 transition-colors duration-300"
+          >
+            View My Resume
+          </a>
+
           {/* Horizontal Skills Row (Transparent & Large) */}
-          <div className="flex items-center gap-10 mt-8">
+          <div className="flex flex-wrap items-center gap-5 md:gap-6 mt-8">
             <img 
               data-aos="zoom-in" data-aos-delay="300"
               src="https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg" 
               alt="Figma (UI/UX Design)" 
               title="UI/UX Design (Figma)"
-              className="w-20 h-20 md:w-24 md:h-24 object-contain hover:scale-110 transition-transform duration-300 cursor-pointer drop-shadow-2xl" 
+              className="w-12 h-12 md:w-16 md:h-16 object-contain hover:scale-110 transition-transform duration-300 cursor-pointer drop-shadow-2xl" 
             />
             <img 
-              data-aos="zoom-in" data-aos-delay="450"
+              data-aos="zoom-in" data-aos-delay="400"
               src="https://upload.wikimedia.org/wikipedia/commons/f/fb/Adobe_Illustrator_CC_icon.svg" 
               alt="Illustrator (Graphic Design)" 
               title="Graphic Design (Adobe Illustrator)"
-              className="w-20 h-20 md:w-24 md:h-24 object-contain hover:scale-110 transition-transform duration-300 cursor-pointer drop-shadow-2xl" 
+              className="w-12 h-12 md:w-16 md:h-16 object-contain hover:scale-110 transition-transform duration-300 cursor-pointer drop-shadow-2xl" 
             />
             <img 
-              data-aos="zoom-in" data-aos-delay="600"
+              data-aos="zoom-in" data-aos-delay="500"
               src="https://upload.wikimedia.org/wikipedia/commons/a/af/Adobe_Photoshop_CC_icon.svg" 
               alt="Photoshop (Branding)" 
               title="Branding (Adobe Photoshop)"
-              className="w-20 h-20 md:w-24 md:h-24 object-contain hover:scale-110 transition-transform duration-300 cursor-pointer drop-shadow-2xl" 
+              className="w-12 h-12 md:w-16 md:h-16 object-contain hover:scale-110 transition-transform duration-300 cursor-pointer drop-shadow-2xl" 
+            />
+            <img 
+              data-aos="zoom-in" data-aos-delay="600"
+              src="https://i.pinimg.com/1200x/b2/24/bc/b224bcfb58a1861dee8afc847a5d657d.jpg" 
+              alt="Canva" 
+              title="Canva"
+              className="w-12 h-12 md:w-16 md:h-16 object-contain hover:scale-110 transition-transform duration-300 cursor-pointer drop-shadow-2xl rounded-2xl md:rounded-[1.25rem]" 
+            />
+            <img 
+              data-aos="zoom-in" data-aos-delay="700"
+              src="https://upload.wikimedia.org/wikipedia/commons/c/c2/Adobe_XD_CC_icon.svg" 
+              alt="Adobe XD" 
+              title="Adobe XD"
+              className="w-12 h-12 md:w-16 md:h-16 object-contain hover:scale-110 transition-transform duration-300 cursor-pointer drop-shadow-2xl" 
+            />
+            <img 
+              data-aos="zoom-in" data-aos-delay="800"
+              src="https://upload.wikimedia.org/wikipedia/commons/4/48/Adobe_InDesign_CC_icon.svg" 
+              alt="Adobe InDesign" 
+              title="Adobe InDesign"
+              className="w-12 h-12 md:w-16 md:h-16 object-contain hover:scale-110 transition-transform duration-300 cursor-pointer drop-shadow-2xl" 
             />
           </div>
 

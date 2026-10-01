@@ -4,13 +4,11 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 const Contact = () => {
   const ref = useRef(null);
   
-  // React Form State tracking
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
     email: '',
-    message: '',
-    permission: false
+    message: ''
   });
 
   const { scrollYProgress } = useScroll({
@@ -34,17 +32,12 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault(); // Prevents the painful page-refresh crash
 
-    if (!formData.permission) {
-      alert("Please accept the contact permission checkbox.");
-      return;
-    }
-
     // Process your form payload safely here (e.g., Axios, EmailJS, Fetch API)
     console.log("Form Data Submitted Successfully:", formData);
     alert(`Thanks ${formData.firstName}! Message captured.`);
     
     // Optional Reset
-    setFormData({ firstName: '', lastName: '', email: '', message: '', permission: false });
+    setFormData({ firstName: '', lastName: '', email: '', message: '' });
   };
 
   return (
@@ -77,7 +70,7 @@ const Contact = () => {
           </div>
           <p className="text-sm md:text-base mb-12 md:mb-20 text-white/80 max-w-2xl">
             Have a design project, brand idea, or digital experience in mind? I’m open to opportunities and collaborations in graphic design and UI/UX design.<br/><br/>
-            Email: supriyasundharam1@gmail.com | Phone: 8220367321 | Location: Bengaluru, India
+            Email: supriyatheuxdesigner@gmail.com | Phone: 8220367321 | Location: Bengaluru, India
           </p>
 
           <form onSubmit={handleSubmit} className="flex flex-col gap-12 md:gap-16 w-full">
@@ -136,43 +129,16 @@ const Contact = () => {
             </div>
 
             {/* Bottom Section */}
-            <div className="flex flex-col md:flex-row gap-12 mt-4">
-              {/* Left text */}
-              <div className="flex-1 flex items-start gap-4 text-sm font-medium text-white/90">
-                <input 
-                  type="checkbox" 
-                  id="permission" 
-                  checked={formData.permission}
-                  onChange={handleChange}
-                  className="mt-1 w-4 h-4 rounded-sm border-white/40 bg-transparent text-white focus:ring-white focus:ring-offset-0 focus:ring-offset-transparent cursor-pointer" 
-                  style={{ accentColor: "white" }}
-                />
-                <label htmlFor="permission" className="cursor-pointer max-w-[280px] leading-snug">
-                  Feel free to reach out for design opportunities, collaborations, or project discussions.
-                </label>
-              </div>
-
-              {/* Right text & button */}
-              <div className="flex-1 flex flex-col gap-8 text-xs text-white/70 font-medium">
-                <p className="leading-relaxed max-w-[400px]">
-                  This site is protected by reCAPTCHA and the Google <a href="#" className="underline hover:text-white transition-colors">Privacy Policy</a> and <a href="#" className="underline hover:text-white transition-colors">Terms of Service</a> apply.
-                </p>
-                <div className="flex flex-col sm:flex-row sm:justify-between sm:items-end gap-6">
-                  <p className="max-w-[250px] leading-relaxed">
-                    For information on how to unsubscribe, please review our <a href="#" className="underline hover:text-white transition-colors">privacy policy</a>.
-                  </p>
-                  
-                  <button 
-                    type="submit" 
-                    className="px-8 py-3 rounded-full border border-white/40 text-white font-bold flex items-center justify-center gap-3 hover:bg-white hover:text-[#ff2a2a] transition-all duration-300 group whitespace-nowrap self-start sm:self-auto"
-                  >
-                    Send
-                    <svg className="w-5 h-5 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                    </svg>
-                  </button>
-                </div>
-              </div>
+            <div className="flex justify-end mt-4">
+              <button 
+                type="submit" 
+                className="px-8 py-3 rounded-full border border-white/40 text-white font-bold flex items-center justify-center gap-3 hover:bg-white hover:text-[#ff2a2a] transition-all duration-300 group whitespace-nowrap"
+              >
+                Send
+                <svg className="w-5 h-5 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+              </button>
             </div>
           </form>
 

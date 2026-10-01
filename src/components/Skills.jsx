@@ -4,20 +4,41 @@ import { motion } from 'framer-motion';
 const Skills = () => {
   const skillsData = [
     {
+      category: 'Graphic Design',
+      skills: [
+        { name: 'Adobe Photoshop', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-plain.svg' },
+        { name: 'Adobe Illustrator', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/illustrator/illustrator-plain.svg' },
+        { name: 'Canva', icon: 'https://i.pinimg.com/1200x/b2/24/bc/b224bcfb58a1861dee8afc847a5d657d.jpg' },
+        { name: 'Adobe InDesign', icon: 'https://upload.wikimedia.org/wikipedia/commons/4/48/Adobe_InDesign_CC_icon.svg' },
+        { name: 'CorelDRAW', icon: 'https://img.icons8.com/color/96/corel-draw.png' }
+      ],
+    },
+    {
       category: 'UI/UX Design',
-      skills: ['User Research', 'Wireframing', 'Prototyping', 'Information Architecture', 'Usability Testing', 'Interaction Design', 'Mobile App Design', 'Web Design'],
+      skills: [
+        { name: 'Figma', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg' },
+        { name: 'Adobe XD', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/xd/xd-plain.svg' },
+        { name: 'Wireframing', icon: 'https://api.iconify.design/mdi:pencil-ruler.svg' },
+        { name: 'Prototyping', icon: 'https://api.iconify.design/mdi:devices.svg' },
+      ],
     },
     {
-      category: 'Visual & Graphic Design',
-      skills: ['Visual Design', 'Typography', 'Color Theory', 'Vector Illustration', 'Social Media Design', 'Layout Design'],
+      category: 'Design & Visual Skills',
+      skills: [
+        { name: 'Branding & Visual Identity', icon: 'https://api.iconify.design/mdi:bullhorn-outline.svg' },
+        { name: 'Typography', icon: 'https://api.iconify.design/mdi:format-text.svg' },
+        { name: 'Color Theory', icon: 'https://api.iconify.design/mdi:palette.svg' },
+        { name: 'Layout & Logo Design', icon: 'https://api.iconify.design/mdi:view-dashboard-outline.svg' }
+      ],
     },
     {
-      category: 'Branding & Identity',
-      skills: ['Brand Identity', 'Logo Design', 'Marketing Creatives', 'Corporate Design', 'Mockups'],
-    },
-    {
-      category: 'Tools & Technologies',
-      skills: ['Figma', 'Adobe Photoshop', 'Adobe Illustrator', 'Canva', 'HTML'],
+      category: 'Web & Digital Design',
+      skills: [
+        { name: 'HTML', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg' },
+        { name: 'CSS', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg' },
+        { name: 'Responsive Design', icon: 'https://api.iconify.design/mdi:responsive.svg' },
+        { name: 'Landing Page Design', icon: 'https://api.iconify.design/mdi:web.svg' },
+      ],
     }
   ];
  
@@ -81,16 +102,17 @@ const Skills = () => {
           </h3>
  
           {/* Skills pills container */}
-          <div className="flex flex-wrap gap-2">
+          <div className="flex flex-wrap gap-3">
             {skills.map((skill, idx) => (
               <motion.button
                 key={idx}
                 variants={skillPillVariants}
                 initial="initial"
                 whileHover="hover"
-                className="px-3 py-1.5 text-xs font-medium text-black bg-black/3 hover:bg-red-500/10 border border-black/5 hover:border-red-500/20 rounded-full transition-all duration-300 cursor-default select-none hover:text-red-500"
+                className="flex items-center gap-2 px-3 py-2 text-xs font-medium text-black bg-black/3 hover:bg-red-500/10 border border-black/5 hover:border-red-500/20 rounded-full transition-all duration-300 cursor-default select-none hover:text-red-500"
               >
-                {skill}
+                <img src={skill.icon} alt={skill.name} className="w-5 h-5 object-contain rounded-md" />
+                <span>{skill.name}</span>
               </motion.button>
             ))}
           </div>

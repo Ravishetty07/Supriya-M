@@ -83,22 +83,35 @@ const Hero = () => {
           <div 
             data-aos="fade-up"
             data-aos-delay="400"
-            className="flex flex-row items-center gap-4 w-full"
+            className="flex flex-wrap items-center gap-4 w-full"
           >
-            {/* Primary Button */}
+            {/* View Projects Button */}
             <a 
               href="#projects" 
-              className="px-6 py-2.5 md:px-7 md:py-3 text-xs md:text-sm rounded-full bg-white text-black font-bold hover:bg-neutral-100 transition-all duration-300 transform hover:-translate-y-0.5 shadow-lg inline-block text-center"
+              className="px-5 py-2.5 md:px-6 md:py-3 rounded-full bg-white border border-white text-black font-bold hover:bg-neutral-200 hover:border-neutral-200 transition-all duration-300 transform hover:-translate-y-0.5 shadow-lg flex items-center gap-2.5 text-xs md:text-sm"
             >
-              View My Work
+              <svg className="w-4 h-4 md:w-5 md:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
+              <span>View Projects</span>
             </a>
             
-            {/* Secondary Button */}
+            {/* Email Button */}
             <a 
-              href="#contact" 
-              className="px-6 py-2.5 md:px-7 md:py-3 text-xs md:text-sm rounded-full bg-black/10 border border-white text-white font-bold hover:bg-white/10 transition-all duration-300 backdrop-blur-md transform hover:-translate-y-0.5 inline-block text-center"
+              href="mailto:supriyatheuxdesigner@gmail.com" 
+              className="px-5 py-2.5 md:px-6 md:py-3 rounded-full bg-white/10 border border-white/30 text-white font-medium hover:bg-[#ff2a2a] hover:text-white hover:border-[#ff2a2a] transition-all duration-300 backdrop-blur-md transform hover:-translate-y-0.5 shadow-lg flex items-center gap-2.5 text-xs md:text-sm"
             >
-              Contact Me
+              <svg className="w-4 h-4 md:w-5 md:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+              <span>Email</span>
+            </a>
+
+            {/* LinkedIn Button */}
+            <a 
+              href="https://www.linkedin.com/in/supriya-m-9b3542439" 
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-5 py-2.5 md:px-6 md:py-3 rounded-full bg-white/10 border border-white/30 text-white font-medium hover:bg-[#0a66c2] hover:text-white hover:border-[#0a66c2] transition-all duration-300 backdrop-blur-md transform hover:-translate-y-0.5 shadow-lg flex items-center gap-2.5 text-xs md:text-sm"
+            >
+              <svg className="w-4 h-4 md:w-5 md:h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" /></svg>
+              <span>LinkedIn</span>
             </a>
           </div>
         </div>

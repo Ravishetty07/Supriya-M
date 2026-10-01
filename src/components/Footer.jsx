@@ -26,7 +26,7 @@ const Footer = () => {
       {/* Middle Huge Text */}
       <div className="w-full flex justify-center items-center py-20 md:py-24 overflow-hidden">
         <h2 className="text-[18vw] md:text-[16vw] leading-none font-sans font-bold tracking-tighter lowercase select-none text-[#f4f4f4] w-full text-center">
-          SUPRIYA
+          SUPRIYA.
         </h2>
       </div>
 
@@ -40,11 +40,11 @@ const Footer = () => {
         </div>
         
         <div className="flex flex-col gap-1 md:items-center">
-          <a href="mailto:supriyasundharam1@gmail.com" className="underline hover:text-white transition-colors underline-offset-4 decoration-1 lowercase">supriyasundharam1@gmail.com</a>
+          <a href="mailto:supriyatheuxdesigner@gmail.com" className="underline hover:text-white transition-colors underline-offset-4 decoration-1 lowercase">supriyatheuxdesigner@gmail.com</a>
         </div>
         
         <div className="flex flex-col gap-1 md:items-end">
-          <a href="#" className="underline hover:text-white transition-colors underline-offset-4 decoration-1">Privacy Policy</a>
+          <a href="#" className="underline hover:text-white transition-colors underline-offset-4 decoration-1"></a>
         </div>
       </div>
     </footer>
